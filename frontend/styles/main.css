@@ -1,0 +1,36 @@
+.landing-countainer {
+	background-image: url(/frontend/public/Landing_background.webp);
+	display: flex;
+	flex-direction: column;
+	height: 20rem;
+	align-items: start;
+	justify-content: start;
+	padding-right: 100px;
+	padding-top: 100px;
+	gap: 10px;
+}
+
+.landing-countainer h4 {
+	font-size: 28px;
+	color: white;
+}
+
+.landing-countainer h1 {
+	font-size: 70px;
+	color: white;
+}
+.landing-countainer p {
+	color: black;
+	line-height: 24px;
+}
+
+.sign-in-button {
+	margin-top: 30px;
+	font-size: 23px;
+	border: none;
+	padding: 16px 30px;
+	color: rgb(63, 122, 163);
+	background-color: white;
+	border-radius: 40px;
+	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.221);
+}

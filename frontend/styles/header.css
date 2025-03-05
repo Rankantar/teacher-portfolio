@@ -1,0 +1,43 @@
+.header-fix {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	padding: 20px 40px;
+	background-color: rgb(215, 225, 225);
+	height: 70px;
+}
+
+.header-fix a {
+	text-decoration: none;
+	color: #000;
+}
+
+.site-title-antity {
+	font-size: 46px;
+}
+
+.site-title {
+	font-size: 40px;
+	font-weight: 700;
+}
+
+#about,
+#lessons,
+#pricing {
+	font-size: 24px;
+	font-weight: 400;
+	padding: 10px;
+}
+
+#book-lesson {
+	font-size: 18px;
+	font-weight: 400;
+	padding: 8px 16px;
+	background-color: white;
+	border-radius: 400px;
+	border-style: solid;
+}

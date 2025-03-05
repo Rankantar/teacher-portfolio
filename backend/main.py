@@ -1,3 +1,4 @@
+#todo: data base, security protocols, schedule, email notification
 from fastapi import FastAPI
 
 app = FastAPI()

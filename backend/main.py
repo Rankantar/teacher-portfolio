@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+
 courses = [
     {'course_id': 1, 'course_name': 'Infi 1'},
     {'course_id': 2, 'course_name': 'Infi 2'},

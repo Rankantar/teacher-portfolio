@@ -1,5 +1,5 @@
 .landing-countainer {
-	background-image: url(/frontend/public/Landing_background.webp);
+	background-image: url(/public/Landing_background.webp);
 	display: flex;
 	flex-direction: column;
 	height: 20rem;

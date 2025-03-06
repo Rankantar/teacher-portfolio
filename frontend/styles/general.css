@@ -7,4 +7,13 @@
 body {
 	height: 3000px;
 	padding-top: 110px;
+	background-color: rgb(251, 248, 239);
+}
+
+.highlited-text-orange {
+	color: rgb(255, 180, 51);
+}
+
+.highlited-text-teal {
+	color: rgb(197, 255, 250);
 }

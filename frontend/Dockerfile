@@ -6,14 +6,16 @@ LABEL version="1.0"
 
 WORKDIR /usr/share/nginx/html
 
-# Copy and rename the main HTML file to index.html
+# Create the frontend directory structure to match the paths in HTML
+RUN mkdir -p frontend/styles frontend/public
+
+# Copy the main HTML file
 COPY index.html index.html
-
-# Copy the styles directory with CSS files
-COPY styles/ styles/
-
-# Copy error pages
 COPY 50x.html 50x.html
+
+# Copy the styles directory with CSS files to match the paths in HTML
+COPY styles/ frontend/styles/
+COPY public/ frontend/public/
 
 # Copy custom nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf

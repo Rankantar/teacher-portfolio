@@ -13,7 +13,7 @@
 
 .header-fix a {
 	text-decoration: none;
-	color: #000;
+	color: rgb(251, 248, 239);
 }
 
 .site-title-antity {
@@ -38,7 +38,9 @@
 	font-size: 18px;
 	font-weight: 400;
 	padding: 8px 16px;
-	background-color: white;
+	background-color: rgb(251, 248, 239);
+	color: rgb(255, 180, 51);
+	border: solid 1px rgb(243, 165, 30);
 	border-radius: 400px;
 	border-style: solid;
 }

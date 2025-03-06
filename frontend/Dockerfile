@@ -7,7 +7,7 @@ LABEL version="1.0"
 WORKDIR /usr/share/nginx/html
 
 # Copy and rename the main HTML file to index.html
-COPY index.html index.html
+COPY Index.html index.html
 
 # Copy the styles directory with CSS files
 COPY styles/ styles/

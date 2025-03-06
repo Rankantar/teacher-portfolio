@@ -7,7 +7,7 @@
 	right: 0;
 	top: 0;
 	padding: 20px 40px;
-	background-color: rgb(215, 225, 225);
+	background-color: rgb(128, 203, 196);
 	height: 70px;
 }
 
@@ -31,6 +31,7 @@
 	font-size: 24px;
 	font-weight: 400;
 	padding: 10px;
+	margin-right: 40px;
 }
 
 #book-lesson {

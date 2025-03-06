@@ -5,17 +5,19 @@ LABEL description="Teacher portfolio website frontend"
 LABEL version="1.0"
 
 WORKDIR /usr/share/nginx/html
-COPY . .
-# Copy and rename the main HTML file to index.html
-COPY Index.html index.html
 
-# # Copy the styles directory with CSS files
-COPY styles/ styles/
-COPY public/ public/
-# # Copy error pages
-# COPY 50x.html 50x.html
+# Create the frontend directory structure to match the paths in HTML
+RUN mkdir -p frontend/styles frontend/public
 
-# # Copy custom nginx configuration
+# Copy the main HTML file
+COPY index.html index.html
+COPY 50x.html 50x.html
+
+# Copy the styles directory with CSS files to match the paths in HTML
+COPY styles/ frontend/styles/
+COPY public/ frontend/public/
+
+# Copy custom nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80

@@ -1,6 +1,6 @@
 services:
   app:
-    build: .
+    build: /backend
     container_name: teacher-app
     ports:
       - "8000:8000"
@@ -34,7 +34,7 @@ services:
 
   frontend:
     build:
-      context: ../frontend
+      context: /frontend
     container_name: teacher-frontend
     ports:
       - "8080:80"

@@ -6,19 +6,20 @@ LABEL version="1.0"
 
 WORKDIR /usr/share/nginx/html
 
-# Create the frontend directory structure to match the paths in HTML
-RUN mkdir -p frontend/styles frontend/public
-
 # Copy the main HTML file
-COPY index.html index.html
-COPY 50x.html 50x.html
+COPY index.html .
+COPY 50x.html .
 
-# Copy the styles directory with CSS files to match the paths in HTML
-COPY styles/ frontend/styles/
-COPY public/ frontend/public/
+# Copy the styles and public directories directly
+COPY styles/ styles/
+COPY public/ public/
 
 # Copy custom nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
+
+# Add a debug file to verify file structure
+RUN echo "This is a test file" > test.txt
+RUN ls -la > file_structure.txt
 
 EXPOSE 80
 

@@ -5,18 +5,20 @@
 	position: fixed;
 	inset: 0 0 auto 0;
 	padding: 1em 2em;
-	background-color: var(--clr-teal);
+	background-color: var(--clr-main);
 	width: 100%;
 	z-index: 1000;
 }
 
 .site-title-icon {
 	font-size: var(--fs-l);
+	color: var(--clr-bg);
 }
 
 .site-title {
 	font-size: var(--fs-l);
 	font-weight: 700;
+	color: var(--clr-bg);
 }
 
 .about-nav,
@@ -26,15 +28,16 @@
 	font-size: var(--fs-500);
 	font-weight: 400;
 	padding: 1em;
+	color: var(--clr-bg);
 }
 
 .book-lesson {
 	font-size: var(--fs-400);
 	font-weight: 400;
 	padding: 0.75em 1em;
-	background-color: rgb(251, 248, 239);
-	color: var(--clr-orange);
-	border: solid 1px var(--clr-orange);
+	background-color: var(--clr-accent);
+	color: var(--clr-bg);
+	border: solid 1px var(--clr-bg);
 	border-radius: 25px;
 	cursor: pointer;
 }

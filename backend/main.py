@@ -6,6 +6,7 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 import os
 import logging
+from datetime import datetime
 
 # Set up basic logging
 logging.basicConfig(level=logging.INFO)
@@ -52,6 +53,29 @@ async def create_event(event: CalendarEvent):
     except Exception as e:
         logger.error("Error creating event: %s", e)
         raise HTTPException(status_code=500, detail="Error creating event")
+
+@app.get("/get_events")
+async def get_events(start: datetime, end: datetime):
+    """
+    Retrieve all events between the specified start and end time.
+    The start and end query parameters should be in ISO 8601 format.
+    
+    Example: /get_events?start=2023-03-24T00:00:00Z&end=2023-03-25T00:00:00Z
+    """
+    calendar_id = 'primary'
+    try:
+        events_result = service.events().list(
+            calendarId=calendar_id,
+            timeMin=start.isoformat(),
+            timeMax=end.isoformat(),
+            singleEvents=True,  # Expands recurring events
+            orderBy="startTime"
+        ).execute()
+        events = events_result.get('items', [])
+        return {"events": events}
+    except Exception as e:
+        logger.error("Error fetching events: %s", e)
+        raise HTTPException(status_code=500, detail="Error fetching events")
 
 courses = [#TODO add descriptions and headlines?
     {'course_id': 1, 'course_name': 'חדו"א 1',

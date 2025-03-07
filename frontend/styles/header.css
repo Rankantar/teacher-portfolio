@@ -10,7 +10,7 @@
 	z-index: 1000;
 }
 
-.site-title-antity {
+.site-title-icon {
 	font-size: var(--fs-l);
 }
 
@@ -19,15 +19,16 @@
 	font-weight: 700;
 }
 
-#about,
-#lessons,
-#pricing {
+.about-nav,
+.lessons-nav,
+.pricing-nav,
+.faq-nav {
 	font-size: var(--fs-500);
 	font-weight: 400;
 	padding: 1em;
 }
 
-#book-lesson {
+.book-lesson {
 	font-size: var(--fs-400);
 	font-weight: 400;
 	padding: 0.75em 1em;
@@ -35,4 +36,5 @@
 	color: var(--clr-orange);
 	border: solid 1px var(--clr-orange);
 	border-radius: 25px;
+	cursor: pointer;
 }

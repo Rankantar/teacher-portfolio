@@ -1,5 +1,6 @@
-#todo: security protocols, schedule, email notification
-import uvicorn
+#todo: data base, security protocols, schedule, email notification, translate
+# from fastapi import FastAPI
+
 from app.main import app
 
 if __name__ == "__main__":

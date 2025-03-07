@@ -24,16 +24,29 @@ async def startup():
         # Seed initial course data if no courses exist
         if course_count == 0:
             initial_courses = [
-                {"course_name": "Infi 1"},
-                {"course_name": "Infi 2"},
-                {"course_name": "Linear Algebra"},
-                {"course_name": "ODE"},
-                {"course_name": "PDE"},
-                {"course_name": "Mechanics"},
-                {"course_name": "Electricity and Magnetism"},
-                {"course_name": "Modern Physics"},
-                {"course_name": "Waves"},
-                {"course_name": "Quantum Mechanics"}
+                #TODO add descriptions and headlines?
+                {'course_id': 1, 'course_name': 'חדו"א 1',
+                'description': 'סדרות\n חקירת פונקציות בעלות נעלם אחד\n טורים'},
+                {'course_id': 2, 'course_name': 'חדו"א 2'},
+                {'course_id': 3, 'course_name': 'אלגברה לינארית'},
+                {'course_id': 4, 'course_name': 'משוואות דיפרנציאליות רגילות'},
+                {'course_id': 5, 'course_name': 'מכניקה קלאסית',
+                'description': 'א. קינמטיקה.\n'
+                                'ב. חוקי ניוטון.\n'
+                                'ג. תנע קווי ומתקף.\n'
+                                'ד. משפט עבודה ואנרגיה.\n'
+                                'ה. תנע זוויתי ומומנט כוח (טורק).\n'
+                                'ו. חוקי קפלר\n'
+                                'ז. תנועת גוף קשיח.'},
+                {'course_id': 6, 'course_name': 'חשמל ומגנטיות',
+                'description': 'א. אלקטרוסטטיקה.\n'
+                                'ב. מעגלים חשמליים.\n'
+                                'ג. שדה מגנטי.'},
+                {'course_id': 7, 'course_name': 'פיזיקה מודרנית'},
+                {'course_id': 8, 'course_name': 'גלים'},
+                {'course_id': 9, 'course_name': 'מכניקה קוונטית 1'},
+                {'course_id': 10, 'course_name': 'מתמטיקה לבגרות'},
+                {'course_id': 11, 'course_name': 'פיזיקה לבגרות'}
             ]
             for i, course_data in enumerate(initial_courses, 1):
                 course = Course(course_id=i, **course_data)

@@ -60,6 +60,10 @@ body {
 	background-color: var(--clr-white);
 }
 
+body::-webkit-scrollbar {
+	display: none;
+}
+
 .highlited-text-orange {
 	color: var(--clr-orange);
 }

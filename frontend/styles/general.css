@@ -46,8 +46,9 @@ li {
 
 section {
 	flex-grow: 1;
-	padding: 3em;
+	padding: 1rem 2rem;
 	align-content: center;
+	min-height: 500px;
 }
 
 a {

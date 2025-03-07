@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="heb" dir="rtl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="#">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/frontend/styles/general.css" />
+		<link rel="stylesheet" href="/frontend/styles/header.css" />
+		<link rel="stylesheet" href="/frontend/styles/main.css" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+			integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<title>Nir physics</title>
+	</head>
+	<body>
+		<header class="header-fix">
+			<!-- left section -->
+			<div class="left-section">
+				<a class="site-title-antity" href="" target="_self">
+					<i class="fa-solid fa-magnet"></i>
+				</a>
+				<a class="site-title" href="" target="_self">Nir4</a>
+			</div>
+
+			<!-- middle section -->
+			<div class="middle-section">
+				<a id="about" href="">אודות</a>
+				<a id="lessons" href="">שיעורים</a>
+				<a id="pricing" href="">מחירון</a>
+			</div>
+
+			<!-- right section -->
+			<div class="right-section">
+				<button id="book-lesson">הזמן שיעור</button>
+			</div>
+		</header>
+
+		<main>
+			<div class="flex-container">
+				<!-- Welcome banner -->
+				<section class="landing-section">
+					<h4>לימדו פיזיקה</h4>
+					<h1>בדרך של ניר</h1>
+					<p>
+						בעזרת ניר תוכל ללמוד הרבה דברים מגניבים כגון ללקק בטריות
+						לזרוק כדור על הרצפה ולצפות בו נופל הרעיון בניר זה שהוא
+						בן אדם ממש חכם ומקסים ולפעמים נותן מכות קטנות בטוסטוס.
+					</p>
+					<button class="sign-in-button">הרשמה</button>
+				</section>
+				<!-- About section -->
+				<section class="about-section">
+					<a href="">
+						<img
+							class="video-thumbnail"
+							src="/frontend/public/nir_thumbnail1.jpg"
+						/>
+					</a>
+
+					<div class="about-info">
+						<h1>
+							<span class="highlited-text-orange">פיזיקה:</span>
+							סיפור אהבה ארוך וכואב
+						</h1>
+						<p>
+							היי אני ניר. מורה לפיזיקה ומה שבאמצע, באמתחתי מספר
+							שיטות לימוד שמתמקדות בהבנה בצורה מעמיקה של עקרונות
+							הפיזיקה ולא רק שינון של נוסחאות. אני מעודד את
+							התלמידים שלי לחקור ותמיד מחפש דרכים על מנת לעורר בהם
+							עניין ולגרום להם להתלהב מהתחום. אני משתמש בשיטות
+							הוראה מגוונות, בין אם מעשיות או מוחשיות על מנת לקלוע
+							לצרכים האישיים של תלמידי. לומדים אצלי תלמידים בכל
+							הגילאים ואני נמצא איתם בקשר מתמיד, אני עוקב אחר
+							התקדמותם האישית ומספק תמיכה גם מעבר לשעות השיעור,
+							מתוך רצון להבטיח הצלחה והבנה אמיתית של החומר.
+						</p>
+					</div>
+				</section>
+				<!-- Lessons section -->
+				<section class="lessons-section">
+					<h1 class="lessons-intro-title">
+						<span class="highlited-text-orange"
+							>השתפרו חיש מהר</span
+						>
+						בעזרת שיעורים המותאמים במיוחד בשבילכם פתיתי שלג קטנטנים
+						<span class="highlited-text-orange"> ומיוחדים </span>
+						שכמותכם
+					</h1>
+					<p class="lessons-intro-description">
+						ברגע שניגע בנושאים בפיזיקה בהם אתם פחות חזקים, נוכל
+						ללמוד יחד ולהתגבר על הקושי! השיעורים הפרטיים שבניתי
+						במהלך שנות לימודיי הרבות נוגעים במספר רחב של תחומים
+						ובנויות במיוחד בשבילכם.
+					</p>
+					<div class="lessons-card-container">
+						<div class="lessons-card">
+							<div class="lessons-card-info">
+								<h1>הסנפת דבק</h1>
+								<p>
+									מצאנו שכשמסניפים דבק משהו כימי משתנה במוח
+									ופתאום מתחילים להבין פיזיקה יותר טוב, זו אחת
+									השיטות הנפוצות ביותר בשוק כיום
+								</p>
+							</div>
+
+							<img
+								class="lessons-card-img"
+								src="/frontend/public/glue_thumbnail2.jpg"
+							/>
+						</div>
+						<div class="lessons-card">
+							<div class="lessons-card-info">
+								<h1>הסנפת דבק</h1>
+								<p>
+									מצאנו שכשמסניפים דבק משהו כימי משתנה במוח
+									ופתאום מתחילים להבין פיזיקה יותר טוב, זו אחת
+									השיטות הנפוצות ביותר בשוק כיום
+								</p>
+							</div>
+
+							<img
+								class="lessons-card-img"
+								src="/frontend/public/glue_thumbnail2.jpg"
+							/>
+						</div>
+						<div class="lessons-card">
+							<div class="lessons-card-info">
+								<h1>הסנפת דבק</h1>
+								<p>
+									מצאנו שכשמסניפים דבק משהו כימי משתנה במוח
+									ופתאום מתחילים להבין פיזיקה יותר טוב, זו אחת
+									השיטות הנפוצות ביותר בשוק כיום
+								</p>
+							</div>
+
+							<img
+								class="lessons-card-img"
+								src="/frontend/public/glue_thumbnail2.jpg"
+							/>
+						</div>
+						<div class="lessons-card">
+							<div class="lessons-card-info">
+								<h1>הסנפת דבק</h1>
+								<p>
+									מצאנו שכשמסניפים דבק משהו כימי משתנה במוח
+									ופתאום מתחילים להבין פיזיקה יותר טוב, זו אחת
+									השיטות הנפוצות ביותר בשוק כיום
+								</p>
+							</div>
+
+							<img
+								class="lessons-card-img"
+								src="/frontend/public/glue_thumbnail2.jpg"
+							/>
+						</div>
+						<div class="lessons-card">
+							<div class="lessons-card-info">
+								<h1>הסנפת דבק</h1>
+								<p>
+									מצאנו שכשמסניפים דבק משהו כימי משתנה במוח
+									ופתאום מתחילים להבין פיזיקה יותר טוב, זו אחת
+									השיטות הנפוצות ביותר בשוק כיום
+								</p>
+							</div>
+
+							<img
+								class="lessons-card-img"
+								src="/frontend/public/glue_thumbnail2.jpg"
+							/>
+						</div>
+						<div class="lessons-card">
+							<div class="lessons-card-info">
+								<h1>הסנפת דבק</h1>
+								<p>
+									מצאנו שכשמסניפים דבק משהו כימי משתנה במוח
+									ופתאום מתחילים להבין פיזיקה יותר טוב, זו אחת
+									השיטות הנפוצות ביותר בשוק כיום
+								</p>
+							</div>
+
+							<img
+								class="lessons-card-img"
+								src="/frontend/public/glue_thumbnail2.jpg"
+							/>
+						</div>
+						<div class="lessons-card">
+							<div class="lessons-card-info">
+								<h1>הסנפת דבק</h1>
+								<p>
+									מצאנו שכשמסניפים דבק משהו כימי משתנה במוח
+									ופתאום מתחילים להבין פיזיקה יותר טוב, זו אחת
+									השיטות הנפוצות ביותר בשוק כיום
+								</p>
+							</div>
+
+							<img
+								class="lessons-card-img"
+								src="/frontend/public/glue_thumbnail2.jpg"
+							/>
+						</div>
+						<div class="lessons-card">
+							<div class="lessons-card-info">
+								<h1>הסנפת דבק</h1>
+								<p>
+									מצאנו שכשמסניפים דבק משהו כימי משתנה במוח
+									ופתאום מתחילים להבין פיזיקה יותר טוב, זו אחת
+									השיטות הנפוצות ביותר בשוק כיום
+								</p>
+							</div>
+
+							<img
+								class="lessons-card-img"
+								src="/frontend/public/glue_thumbnail2.jpg"
+							/>
+						</div>
+					</div>
+				</section>
+				<!-- Pricing section -->
+				<section class="pricing-section">
+					<div class="pricing-flex-container">
+						<div class="pricing-hook-img">
+							<img
+								src="/frontend/public/Adobe Express - file.png"
+							/>
+						</div>
+						<div class="pricing-hook-underlay">
+							<h2 class="pricing-hook-title">
+								למדו חכם יותר עם
+								<span class="highlited-text-lightblue"
+									>ניר
+								</span>
+								כל יום
+								<span class="highlited-text-lightblue"
+									>במהלך השבוע
+								</span>
+								הבא
+							</h2>
+						</div>
+						<h1>מחירון</h1>
+						<div class="pricing-card-container">
+							<div class="pricing-card">
+								<h4>שיעור 1</h4>
+								<div class="pricing-link-row">
+									<h2>$4.20</h2>
+									<a href="">
+										<i class="fa-solid fa-arrow-left"></i>
+									</a>
+								</div>
+								<div>
+									<h5 class="pricing-info-title">
+										כלול בחבילה:
+									</h5>
+									<ul class="pricing-info-list">
+										<li>היי</li>
+										<li>ביי</li>
+										<li>די</li>
+										<li>מאי</li>
+										<li>דידי</li>
+										<li>ביבי</li>
+										<li>ריבי</li>
+										<li>ציפי</li>
+									</ul>
+								</div>
+							</div>
+							<div class="pricing-card-alt">
+								<h4>שיעור 2</h4>
+								<div class="pricing-link-row-alt">
+									<h2>$6.20</h2>
+									<a href="">
+										<i class="fa-solid fa-arrow-left"></i>
+									</a>
+								</div>
+								<div>
+									<h5 class="pricing-info-title">
+										כלול בחבילה:
+									</h5>
+									<ul class="pricing-info-list">
+										<li>היי</li>
+										<li>ביי</li>
+										<li>די</li>
+										<li>מאי</li>
+										<li>דידי</li>
+										<li>ביבי</li>
+										<li>ריבי</li>
+										<li>ציפי</li>
+									</ul>
+								</div>
+							</div>
+							<div class="pricing-card">
+								<h4>שיעור 3</h4>
+								<div class="pricing-link-row">
+									<h2>$8.20</h2>
+									<a href="">
+										<i class="fa-solid fa-arrow-left"></i>
+									</a>
+								</div>
+								<div>
+									<h5 class="pricing-info-title">
+										כלול בחבילה:
+									</h5>
+									<ul class="pricing-info-list">
+										<li>היי</li>
+										<li>ביי</li>
+										<li>די</li>
+										<li>מאי</li>
+										<li>דידי</li>
+										<li>ביבי</li>
+										<li>ריבי</li>
+										<li>ציפי</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- FAQ section -->
+				<section>
+					<div class="faq-container">
+						<div class="faq-card">
+							<div class="card-row">
+								<h1>איך ללמוד עם ניר שונה ממורים אחרים?</h1>
+								<i class="fa-solid fa-atom"></i>
+							</div>
+							<p>כן הוא עושה תחושה נעימה וטעם של עוד</p>
+						</div>
+						<div class="faq-card">
+							<div class="card-row">
+								<h1>למה הוא לא מלמד בחינם?</h1>
+								<i class="fa-solid fa-atom"></i>
+							</div>
+							<p>
+								בעיקרון הוא יכול ללמד בחינם אבל אז לא יהיה לו
+								מספיק כסף לקנות משחקי מחשב וזו בעיה מאוד גדולה
+								חביבי
+							</p>
+						</div>
+						<div class="faq-card">
+							<div class="card-row">
+								<h1>אם אני מביא חבר זה אחד פלוס אחד?</h1>
+								<i class="fa-solid fa-atom"></i>
+							</div>
+							<p>מבחינה מתמטית כן אבל אין הנחות לחברים</p>
+						</div>
+						<div class="faq-card">
+							<div class="card-row">
+								<h1>
+									יש לי שומה בצד שמאל של הרגל אני עומד למות?
+								</h1>
+								<i class="fa-solid fa-atom"></i>
+							</div>
+							<p>
+								אני מבין את הדאגה שלך, אבל חשוב להדגיש שאני לא
+								רופא ואני ממליץ לפנות לרופא עור כדי לבדוק את
+								השומה. שומות בדרך כלל לא מסוכנות, אבל כל שינוי
+								בצורתן, בגודלן ובצבען עלול להיות סימן שצריך
+								לבדוק אותן. הרופא יכול להמליץ אם יש צורך בהסרה
+								או במעקב אבל אני חושב שאתה תמות בסוף.
+							</p>
+						</div>
+					</div>
+				</section>
+				<!-- Book A lesson section -->
+				<section>
+					<div class="book-container">
+						<h1>קבע שיעור</h1>
+						<input type="text" name="" id="" placeholder="שם" />
+						<input
+							type="number"
+							name=""
+							id=""
+							placeholder="טלפון"
+						/>
+						<input type="date" name="" id="" />
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer></footer>
+	</body>
+</html>

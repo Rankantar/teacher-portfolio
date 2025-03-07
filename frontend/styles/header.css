@@ -3,44 +3,36 @@
 	align-items: center;
 	justify-content: space-between;
 	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-	padding: 20px 40px;
-	background-color: rgb(128, 203, 196);
-	height: 70px;
-}
-
-.header-fix a {
-	text-decoration: none;
-	color: rgb(251, 248, 239);
+	inset: 0 0 auto 0;
+	padding: 1em 2em;
+	background-color: var(--clr-teal);
+	width: 100%;
+	z-index: 1000;
 }
 
 .site-title-antity {
-	font-size: 46px;
+	font-size: var(--fs-l);
 }
 
 .site-title {
-	font-size: 40px;
+	font-size: var(--fs-l);
 	font-weight: 700;
 }
 
 #about,
 #lessons,
 #pricing {
-	font-size: 24px;
+	font-size: var(--fs-500);
 	font-weight: 400;
-	padding: 10px;
-	margin-right: 40px;
+	padding: 1em;
 }
 
 #book-lesson {
-	font-size: 18px;
+	font-size: var(--fs-400);
 	font-weight: 400;
-	padding: 8px 16px;
+	padding: 0.75em 1em;
 	background-color: rgb(251, 248, 239);
-	color: rgb(255, 180, 51);
-	border: solid 1px rgb(243, 165, 30);
-	border-radius: 400px;
-	border-style: solid;
+	color: var(--clr-orange);
+	border: solid 1px var(--clr-orange);
+	border-radius: 25px;
 }

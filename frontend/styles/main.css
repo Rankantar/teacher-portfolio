@@ -123,13 +123,13 @@
 .pricing-hook-img {
 	position: absolute;
 	right: -10%;
-	top: -1%;
+	top: 20%;
 	z-index: 100;
 }
 
 .pricing-hook-img img {
 	width: 80%;
-	opacity: 0.7;
+	opacity: 0.9;
 }
 
 .pricing-hook-underlay {
@@ -144,7 +144,7 @@
 }
 
 .pricing-hook-title {
-	font-size: var(--fs-l);
+	font-size: var(--fs-xl);
 	flex: 1;
 	text-align: center;
 }
@@ -163,8 +163,8 @@
 	gap: 2rem;
 }
 
-.pricing-card {
-	color: var(--clr-teal);
+.pricing-card,
+.pricing-card-alt {
 	border-radius: 30px;
 	padding: 1.25em 2em;
 	min-width: 300px;
@@ -172,30 +172,92 @@
 	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.211);
 }
 
-.pricing-link-row {
+.pricing-card {
+	color: var(--clr-teal);
+}
+
+.pricing-card-alt {
+	color: var(--clr-white);
+	background-color: var(--clr-teal);
+}
+
+.pricing-link-row,
+.pricing-link-row-alt {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.pricing-link-row {
+.pricing-link-row,
+.pricing-link-row-alt {
 	font-size: var(--fs-m);
 	margin-bottom: 1em;
 }
 
-.pricing-link-row a {
+.pricing-link-row a,
+.pricing-link-row-alt a {
 	display: grid;
 	place-items: center;
 	text-decoration: none;
-	color: var(--clr-teal);
 	border: solid 2px;
 	border-radius: 30px;
 	width: 50px;
 	height: 50px;
 }
 
+.pricing-link-row a {
+	color: var(--clr-teal);
+}
+
 .pricing-info-title {
 	font-size: var(--fs-400);
 	margin-bottom: 1rem;
+}
+
+.faq-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.faq-card {
+	margin: 1em;
+	padding: 2em 3em;
+	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.347);
+	border-radius: 15px;
+
+	background-color: var(--clr-teal);
+	color: var(--clr-white);
+}
+
+.card-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card-row h1 {
+	color: var(--clr-lightblue);
+	font-size: var(--fs-m);
+	margin-bottom: 1rem;
+}
+
+.fa-atom {
+	font-size: var(--fs-m);
+}
+
+.faq-card p {
+	font-size: var(--fs-400);
+	margin-right: 0.8rem;
+	flex: 1;
+	max-width: 120ch;
+}
+
+.book-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
 }

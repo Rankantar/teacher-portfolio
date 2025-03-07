@@ -1,61 +1,57 @@
-.landing-countainer {
+.landing-section,
+.lessons-section {
 	/* background-image: url(/public/Landing_background.webp); */
-	background: rgb(251, 248, 239);
+	background: var(--clr-white);
 	background: linear-gradient(
 		90deg,
-		rgb(251, 248, 239) 0%,
-		rgb(128, 203, 196) 55%
+		var(--clr-white) 0%,
+		var(--clr-teal) 55%
 	);
 }
 
-.landing-countainer,
-.about-container,
-.lessons-container,
-.pricing-section {
-	padding: 150px 100px 200px;
+.landing-section h4 {
+	font-size: var(--fs-l);
+	color: var(--clr-white);
 }
 
-.landing-countainer h4 {
-	font-size: 28px;
-	color: rgb(251, 248, 239);
+.landing-section h1 {
+	font-size: var(--fs-xl);
+	color: var(--clr-white);
+	margin-bottom: 0.25rem;
 }
-
-.landing-countainer h1 {
-	font-size: 100px;
-	color: rgb(251, 248, 239);
-}
-.landing-countainer p {
-	color: rgb(251, 248, 239);
-	line-height: 24px;
-	font-size: 20px;
+.landing-section p {
+	margin-right: 2rem;
+	font-size: var(--fs-500);
+	color: var(--clr-white);
 }
 
 .sign-in-button {
-	margin-top: 30px;
-	font-size: 23px;
+	margin-top: 0.5rem;
 	border: none;
-	padding: 16px 30px;
-	color: rgb(255, 180, 51);
-	background-color: rgb(251, 248, 239);
+	margin-right: 2rem;
+	padding: 0.75em 1em;
+	font-size: var(--fs-500);
+	color: var(--clr-orange);
+	background-color: var(--clr-white);
 	border-radius: 40px;
 	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.221);
 }
 
-.about-container {
+.about-section {
 	display: flex;
 	align-items: center;
-	gap: 200px;
-	justify-content: center;
+	gap: clamp(10px, 5vw, 50px);
+	justify-content: space-evenly;
 }
 
-.about-container a {
+.about-section a {
 	max-width: 600px;
-	min-width: 400px;
 }
 
 .video-thumbnail {
 	border-radius: 40px;
 	max-width: 100%;
+	min-width: 400px;
 	height: auto;
 }
 
@@ -66,73 +62,97 @@
 }
 
 .about-info h1 {
-	margin-bottom: 15px;
-	color: rgb(108, 173, 166);
+	margin-bottom: 1rem;
+	color: var(--clr-teal);
 }
 
 .about-info p {
-	color: gray;
-	font-size: 15px;
-	line-height: 28px;
-}
-
-.lessons-container {
-	background: rgb(251, 248, 239);
-	background: linear-gradient(
-		90deg,
-		rgb(251, 248, 239) 0%,
-		rgb(197, 255, 250) 55%
-	);
-
-	padding-bottom: 200px;
+	color: rgb(150, 150, 150);
+	font-size: var(--fs-400);
 }
 
 .lessons-intro-title {
-	font-size: 50px;
-	margin-bottom: 20px;
-	color: rgb(108, 173, 166);
+	font-size: var(--fs-l);
+	margin-bottom: 2rem;
+	color: var(--clr-white);
 }
 
 .lessons-intro-description {
-	font-size: 20px;
+	font-size: var(--fs-500);
 	line-height: 30px;
-	color: grey;
-	margin-bottom: 200px;
+	color: var(--clr-white);
+	margin-bottom: 10rem;
 }
 
 .lessons-card-container {
 	display: flex;
 	flex-direction: row;
+	overflow: hidden;
 }
 
 .lessons-card {
-	width: 250px;
-	margin-right: 40px;
-	background-color: white;
-	padding: 35px 30px;
-	border-radius: 50px;
+	max-width: 280px;
+	min-width: 250px;
+	margin-right: 1rem;
+	background-color: var(--clr-white);
+	padding: 1.5em;
+	border-radius: 25px;
 }
 
 .lessons-card-info h1 {
-	color: rgb(108, 173, 166);
-	margin-bottom: 20px;
+	color: var(--clr-teal);
+	margin-bottom: 1rem;
 }
 
 .lessons-card-info p {
 	color: grey;
-	line-height: 24px;
-	margin-bottom: 20px;
+	margin-bottom: 1rem;
 }
 
 .lessons-card-img {
 	width: 100%;
-	height: 200px;
 	object-fit: contain;
 }
 
+.pricing-flex-container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.pricing-hook-img {
+	position: absolute;
+	right: -10%;
+	top: -1%;
+	z-index: 100;
+}
+
+.pricing-hook-img img {
+	width: 80%;
+	opacity: 0.7;
+}
+
+.pricing-hook-underlay {
+	background-color: var(--clr-teal);
+	height: 80vh;
+	width: auto;
+	border-radius: 50px;
+	margin-bottom: 30rem;
+	z-index: 0;
+	display: flex;
+	align-items: center;
+}
+
+.pricing-hook-title {
+	font-size: var(--fs-l);
+	flex: 1;
+	text-align: center;
+}
+
 .pricing-section h1 {
-	font-size: 70px;
-	margin-bottom: 40px;
+	font-size: var(--fs-xl);
+	margin-bottom: 14rem;
+	color: var(--clr-teal);
 }
 
 .pricing-card-container {
@@ -140,15 +160,13 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-evenly;
-	padding: 30px;
-	gap: 20px;
+	gap: 2rem;
 }
 
 .pricing-card {
-	color: rgb(108, 173, 166);
+	color: var(--clr-teal);
 	border-radius: 30px;
-	padding: 20px 50px 20px 20px;
-	margin: 0 0px 20px;
+	padding: 1.25em 2em;
 	min-width: 300px;
 	min-height: 300px;
 	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.211);
@@ -161,35 +179,23 @@
 	justify-content: space-between;
 }
 
-.pricing-card h4 {
-	font-size: 25px;
-	margin-bottom: 5px;
-}
-
 .pricing-link-row {
-	font-size: 40px;
-	margin-bottom: 50px;
+	font-size: var(--fs-m);
+	margin-bottom: 1em;
 }
 
 .pricing-link-row a {
 	display: grid;
 	place-items: center;
 	text-decoration: none;
-	color: rgb(108, 173, 166);
+	color: var(--clr-teal);
 	border: solid 2px;
 	border-radius: 30px;
 	width: 50px;
 	height: 50px;
-	display: grid;
-	place-items: center;
 }
 
 .pricing-info-title {
-	font-size: 17px;
-}
-
-.pricing-info-list {
-	margin-top: 10px;
-	margin-right: 14px;
-	line-height: 30px;
+	font-size: var(--fs-400);
+	margin-bottom: 1rem;
 }

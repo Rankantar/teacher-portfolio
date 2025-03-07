@@ -1,19 +1,70 @@
+:root {
+	--fs-xl: 5rem;
+	--fs-l: 3rem;
+	--fs-m: 2rem;
+	--fs-600: 1.5rem;
+	--fs-500: 1.25rem;
+	--fs-400: 1rem;
+
+	--clr-orange: rgb(243, 165, 30);
+	--clr-white: rgb(251, 248, 239);
+	--clr-teal: rgb(128, 203, 196);
+	--clr-lightblue: rgb(197, 255, 250);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 * {
 	margin: 0;
 	padding: 0;
+
+	box-sizing: border-box;
 	font-family: "Varela Round", Arial, sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+p,
+li {
+	max-width: 65ch;
+	line-height: 1.5;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	height: 500vh;
+}
+
+section {
+	flex-grow: 1;
+	padding: 3em;
+	align-content: center;
+}
+
+a {
+	text-decoration: none;
+	color: var(--clr-white);
+}
+
 body {
-	height: 3000px;
-	padding-top: 110px;
-	background-color: rgb(251, 248, 239);
+	padding-top: 5.5em;
+	background-color: var(--clr-white);
 }
 
 .highlited-text-orange {
-	color: rgb(255, 180, 51);
+	color: var(--clr-orange);
 }
 
-.highlited-text-teal {
-	color: rgb(197, 255, 250);
+.highlited-text-lightblue {
+	color: var(--clr-lightblue);
 }

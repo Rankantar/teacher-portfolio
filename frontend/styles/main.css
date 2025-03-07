@@ -112,7 +112,8 @@
 }
 
 .lessons-card-container::-webkit-scrollbar {
-	width: 2em;
+	height: 1em;
+	width: auto;
 }
 
 .lessons-card-container::-webkit-scrollbar-track {

@@ -38,27 +38,14 @@ li {
 	line-height: 1.5;
 }
 
-.flex-container {
-	display: flex;
-	flex-direction: column;
-	height: 700svh;
-}
-
-section {
-	flex-grow: 1;
-	padding: 1rem 4rem;
-	align-content: center;
-	min-height: 500px;
-}
-
 a {
 	text-decoration: none;
-	color: var(--clr-accent);
+	color: var(--clr-text);
 }
 
 body {
-	padding-top: 5.5em;
 	background-color: white;
+	margin-top: 85px;
 }
 
 body::-webkit-scrollbar {
@@ -71,4 +58,8 @@ body::-webkit-scrollbar {
 
 .highlited-text-lightblue {
 	color: var(--clr-bg);
+}
+
+section {
+	padding: 8rem 5rem 20rem;
 }

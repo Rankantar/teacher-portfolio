@@ -4,22 +4,6 @@
 	background-color: var(--clr-bg);
 }
 
-#about {
-	scroll-margin-top: 5rem;
-}
-
-#lessons {
-	scroll-margin-top: -7rem;
-}
-
-#pricing {
-	scroll-margin-top: -85rem;
-}
-
-#faq {
-	scroll-margin-top: -5rem;
-}
-
 .landing-section h4 {
 	font-size: var(--fs-l);
 	color: var(--clr-text);
@@ -52,62 +36,59 @@
 .about-section {
 	display: flex;
 	align-items: center;
-	gap: clamp(10px, 5vw, 50px);
 	justify-content: space-evenly;
+	gap: 2rem;
 }
 
-.about-section a {
+.about-img-container {
+	flex: 1;
 	max-width: 600px;
 }
-
 .video-thumbnail {
 	border-radius: 40px;
 	max-width: 100%;
-	min-width: 400px;
 	height: auto;
-}
-
-.about-info {
-	font-size: 24px;
-	max-width: 700px;
-	min-width: 400px;
 }
 
 .about-info h1 {
 	margin-bottom: 1rem;
 	color: var(--clr-text);
+	font-size: var(--fs-l);
 }
 
 .about-info p {
 	color: var(text);
 	font-size: var(--fs-400);
+	margin-right: 2rem;
 }
 
 .lessons-intro-title {
 	font-size: var(--fs-l);
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 	color: var(--clr-text);
 }
 
 .lessons-intro-description {
 	font-size: var(--fs-500);
 	line-height: 30px;
-	color: var(--clr-bg);
+	color: var(--clr-text);
 	margin-bottom: 10rem;
+	margin-right: 2rem;
 }
 
 .lessons-card-container {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-around;
 	overflow-x: auto;
 	padding-bottom: 2em;
-	gap: 1rem;
-	margin: 0 10em;
+	margin: 0 2rem;
 	border-radius: 2px;
+	gap: 1rem;
 }
 
 .lessons-card-container::-webkit-scrollbar {
-	width: 2em;
+	width: 1rem;
 }
 
 .lessons-card-container::-webkit-scrollbar-track {
@@ -121,11 +102,10 @@
 }
 
 .lessons-card {
-	flex: 1;
-	min-width: 300px;
 	background-color: white;
 	padding: 1.5em;
 	border-radius: 25px;
+	min-width: 40ch;
 }
 
 .lessons-card-info h1 {
@@ -143,46 +123,9 @@
 	object-fit: contain;
 }
 
-.pricing-flex-container {
-	display: flex;
-	flex-direction: column;
-	position: relative;
-}
-
-.pricing-hook-img {
-	position: absolute;
-	right: -10%;
-	top: 20%;
-	z-index: 100;
-	transform: translateZ(0);
-}
-
-.pricing-hook-img img {
-	width: 80%;
-	opacity: 0.9;
-}
-
-.pricing-hook-underlay {
-	background-color: var(--clr-main);
-	height: 80vh;
-	width: auto;
-	border-radius: 50px;
-	margin-bottom: 30rem;
-	z-index: 0;
-	display: flex;
-	align-items: center;
-}
-
-.pricing-hook-title {
-	font-size: var(--fs-xl);
-	flex: 1;
-	text-align: center;
-	color: var(--clr-text);
-}
-
 .pricing-section h1 {
 	font-size: var(--fs-xl);
-	margin-bottom: 14rem;
+	margin-bottom: 6rem;
 	color: var(--clr-text);
 }
 
@@ -194,62 +137,54 @@
 	gap: 2rem;
 }
 
-.pricing-card,
-.pricing-card-alt {
-	border-radius: 30px;
-	padding: 1.25em 2em;
+.pricing-card-a,
+.pricing-card-b {
 	flex: 1;
-	min-width: 400px;
-	min-height: 400px;
-	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.211);
+	padding: 1em;
+	border-radius: 20px;
+	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.126);
 }
 
-.pricing-card {
-	color: var(--clr-main);
-	background-color: var(--clr-bg);
+.pricing-card-a h4,
+.pricing-card-b h4 {
+	font-size: var(--fs-500);
 }
 
-.pricing-card-alt {
-	color: var(--clr-bg);
-	background-color: var(--clr-main);
-}
-
-.pricing-link-row,
-.pricing-link-row-alt {
+.card-a-price-row,
+.card-b-price-row {
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-}
-
-.pricing-link-row,
-.pricing-link-row-alt {
 	font-size: var(--fs-m);
-	margin-bottom: 1em;
 }
 
-.pricing-link-row a,
-.pricing-link-row-alt a {
-	display: grid;
-	place-items: center;
-	text-decoration: none;
-	border: solid 2px;
+.card-a-price-row i,
+.card-b-price-row i {
+	color: var(--clr-accent);
+	border: solid 2px var(--clr-accent);
 	border-radius: 30px;
-	width: 50px;
-	height: 50px;
+	padding: 0.3rem 0.4rem;
 }
 
-.pricing-link-row a {
-	color: var(--clr-teal);
-}
-
-.pricing-link-row-alt a {
-	color: var(--clr-bg);
-}
-
-.pricing-info-title {
+.card-a-inc,
+.card-b-inc {
 	font-size: var(--fs-400);
-	margin-bottom: 1rem;
+}
+
+.card-a-list,
+.card-b-list {
+	margin-right: 2rem;
+	font-size: var(--fs-400);
+}
+
+.pricing-card-a {
+	background-color: var(--clr-bg);
+	color: var(--clr-main);
+}
+
+.pricing-card-b {
+	background-color: var(--clr-main);
+	color: var(--clr-bg);
 }
 
 .faq-container {
@@ -259,7 +194,7 @@
 }
 
 .faq-card {
-	margin: 1em;
+	margin-bottom: 3em;
 	padding: 2em 3em;
 	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.347);
 	border-radius: 15px;
@@ -275,7 +210,7 @@
 }
 
 .card-row h1 {
-	color: var(--clr-lightblue);
+	color: var(--clr-main);
 	font-size: var(--fs-m);
 	margin-bottom: 1rem;
 }

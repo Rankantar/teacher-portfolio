@@ -7,6 +7,7 @@ class Course(Base):
     
     course_id = Column(Integer, primary_key=True, index=True)
     course_name = Column(String, index=True)
+    description = Column(String, index = False)
 
 class Student(Base):
     __tablename__ = "students"

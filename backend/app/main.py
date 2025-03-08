@@ -25,12 +25,12 @@ async def startup():
         if course_count == 0:
             initial_courses = [
                 #TODO add descriptions and headlines?
-                {'course_id': 1, 'course_name': 'חדו"א 1',
+                {'course_name': 'חדו"א 1',
                 'description': 'סדרות\n חקירת פונקציות בעלות נעלם אחד\n טורים'},
-                {'course_id': 2, 'course_name': 'חדו"א 2'},
-                {'course_id': 3, 'course_name': 'אלגברה לינארית'},
-                {'course_id': 4, 'course_name': 'משוואות דיפרנציאליות רגילות'},
-                {'course_id': 5, 'course_name': 'מכניקה קלאסית',
+                {'course_name': 'חדו"א 2'},
+                {'course_name': 'אלגברה לינארית'},
+                {'course_name': 'משוואות דיפרנציאליות רגילות'},
+                {'course_name': 'מכניקה קלאסית',
                 'description': 'א. קינמטיקה.\n'
                                 'ב. חוקי ניוטון.\n'
                                 'ג. תנע קווי ומתקף.\n'
@@ -38,18 +38,21 @@ async def startup():
                                 'ה. תנע זוויתי ומומנט כוח (טורק).\n'
                                 'ו. חוקי קפלר\n'
                                 'ז. תנועת גוף קשיח.'},
-                {'course_id': 6, 'course_name': 'חשמל ומגנטיות',
+                {'course_name': 'חשמל ומגנטיות',
                 'description': 'א. אלקטרוסטטיקה.\n'
                                 'ב. מעגלים חשמליים.\n'
                                 'ג. שדה מגנטי.'},
-                {'course_id': 7, 'course_name': 'פיזיקה מודרנית'},
-                {'course_id': 8, 'course_name': 'גלים'},
-                {'course_id': 9, 'course_name': 'מכניקה קוונטית 1'},
-                {'course_id': 10, 'course_name': 'מתמטיקה לבגרות'},
-                {'course_id': 11, 'course_name': 'פיזיקה לבגרות'}
+                {'course_name': 'פיזיקה מודרנית'},
+                {'course_name': 'גלים'},
+                {'course_name': 'מכניקה קוונטית 1'},
+                {'course_name': 'מתמטיקה לבגרות'},
+                {'course_name': 'פיזיקה לבגרות'}
             ]
             for i, course_data in enumerate(initial_courses, 1):
-                course = Course(course_id=i, **course_data)
+                # Extract only valid fields for the Course model (course_id and course_name)
+                course_name = course_data.get('course_name', '')
+                description = course_data.get('description', '')
+                course = Course(course_id=i, course_name=course_name, description=description)
                 db.add(course)
         
         # Seed initial student data if no students exist

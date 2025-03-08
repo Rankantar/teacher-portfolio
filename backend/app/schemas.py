@@ -2,6 +2,7 @@ from pydantic import BaseModel
 
 class CourseBase(BaseModel):
     course_name: str
+    description: str
 
 class CourseCreate(CourseBase):
     pass

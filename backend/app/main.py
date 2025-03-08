@@ -1,18 +1,14 @@
 from fastapi import FastAPI
 from sqlalchemy.exc import SQLAlchemyError
+from contextlib import asynccontextmanager
 
 from .database import engine, SessionLocal
 from .models import Base, Course, Student
 from .api.api import api_router
 
-app = FastAPI(title="Teacher Portfolio API")
-
-# Include API router
-app.include_router(api_router)
-
-# Event to create tables on startup if they don't exist
-@app.on_event("startup")
-async def startup():
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup: Create tables and seed data
     Base.metadata.create_all(bind=engine)
     
     # Check if we need to seed initial data
@@ -72,6 +68,15 @@ async def startup():
         print(f"Error seeding database: {str(e)}")
     finally:
         db.close()
+    
+    yield  # This is where the app runs
+    
+    # Shutdown: Add any cleanup code here if needed
+
+app = FastAPI(title="Teacher Portfolio API", lifespan=lifespan)
+
+# Include API router
+app.include_router(api_router)
 
 @app.get("/")
 async def root():

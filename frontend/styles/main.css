@@ -1,16 +1,19 @@
-.landing-section,
-.lessons-section {
-	/* background-image: url(/public/Landing_background.webp); */
-	background-color: var(--clr-bg);
+.landing-section {
+	background-image: url(/frontend/public/sectionbg1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	/* background-color: var(--clr-bg); */
 }
 
 .landing-section h4 {
 	font-size: var(--fs-l);
-	color: var(--clr-text);
+	color: var(--clr-bg);
 }
 
 .landing-section h1 {
-	font-size: var(--fs-xl);
+	font-size: var(--fs-xxl);
 	color: var(--clr-text);
 	margin-bottom: 0.25rem;
 }
@@ -38,6 +41,7 @@
 	align-items: center;
 	justify-content: space-evenly;
 	gap: 2rem;
+	background-color: var(--clr-main);
 }
 
 .about-img-container {
@@ -52,14 +56,18 @@
 
 .about-info h1 {
 	margin-bottom: 1rem;
-	color: var(--clr-text);
+	color: var(--clr-bg);
 	font-size: var(--fs-l);
 }
 
 .about-info p {
-	color: var(text);
+	color: var(--clr-bg);
 	font-size: var(--fs-400);
 	margin-right: 2rem;
+}
+
+.lessons-section {
+	background-color: var(--clr-bg);
 }
 
 .lessons-intro-title {
@@ -124,10 +132,14 @@
 	object-fit: contain;
 }
 
+.pricing-section {
+	background-color: var(--clr-main);
+}
+
 .pricing-section h1 {
 	font-size: var(--fs-xl);
 	margin-bottom: 6rem;
-	color: var(--clr-text);
+	color: var(--clr-bg);
 }
 
 .pricing-card-container {
@@ -184,8 +196,12 @@
 }
 
 .pricing-card-b {
+	background-color: var(--clr-bg);
+	color: var(--clr-main);
+}
+
+.faq-section {
 	background-color: var(--clr-main);
-	color: var(--clr-bg);
 }
 
 .faq-container {
@@ -218,7 +234,7 @@
 
 .fa-atom {
 	font-size: var(--fs-m);
-	color: var(--clr-main);
+	color: var(--clr-accent);
 }
 
 .faq-card p {

@@ -1,4 +1,5 @@
 :root {
+	--fs-xxl: 7rem;
 	--fs-xl: 5rem;
 	--fs-l: 3rem;
 	--fs-m: 2rem;
@@ -8,8 +9,9 @@
 
 	--clr-accent: #ff5b5b;
 	--clr-bg: #e0f7fa;
-	--clr-main: #005f5f;
+	--clr-main: #395a77;
 	--clr-text: #212121;
+	/* #005f5f */
 }
 
 html {
@@ -61,5 +63,5 @@ body::-webkit-scrollbar {
 }
 
 section {
-	padding: 8rem 5rem 20rem;
+	padding: 14rem 5rem 28rem;
 }

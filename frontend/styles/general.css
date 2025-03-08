@@ -1,4 +1,5 @@
 :root {
+	--fs-xxl: 7rem;
 	--fs-xl: 5rem;
 	--fs-l: 3rem;
 	--fs-m: 2rem;
@@ -6,10 +7,11 @@
 	--fs-500: 1.25rem;
 	--fs-400: 1rem;
 
-	--clr-orange: rgb(248, 194, 101);
-	--clr-white: rgb(251, 248, 239);
-	--clr-teal: rgb(128, 203, 196);
-	--clr-lightblue: rgb(197, 255, 250);
+	--clr-accent: #ff5b5b;
+	--clr-bg: #e0f7fa;
+	--clr-main: #395a77;
+	--clr-text: #212121;
+	/* #005f5f */
 }
 
 html {
@@ -38,27 +40,14 @@ li {
 	line-height: 1.5;
 }
 
-.flex-container {
-	display: flex;
-	flex-direction: column;
-	height: 700svh;
-}
-
-section {
-	flex-grow: 1;
-	padding: 1rem 2rem;
-	align-content: center;
-	min-height: 500px;
-}
-
 a {
 	text-decoration: none;
-	color: var(--clr-white);
+	color: var(--clr-text);
 }
 
 body {
-	padding-top: 5.5em;
-	background-color: var(--clr-white);
+	background-color: white;
+	margin-top: 85px;
 }
 
 body::-webkit-scrollbar {
@@ -66,9 +55,13 @@ body::-webkit-scrollbar {
 }
 
 .highlited-text-orange {
-	color: var(--clr-orange);
+	color: var(--clr-accent);
 }
 
 .highlited-text-lightblue {
-	color: var(--clr-lightblue);
+	color: var(--clr-bg);
+}
+
+section {
+	padding: 14rem 5rem 28rem;
 }

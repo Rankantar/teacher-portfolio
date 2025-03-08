@@ -11,7 +11,8 @@ def get_course(db: Session, course_id: int):
 def create_course(db: Session, course: schemas.CourseCreate):
     last_course = db.query(models.Course).order_by(models.Course.course_id.desc()).first()
     next_id = 1 if last_course is None else last_course.course_id + 1
-    db_course = models.Course(course_id=next_id, course_name=course.course_name)
+    db_course =(models.Course(course_id=next_id, course_name=course.course_name,
+                              description = course.description, difficulty = course.difficulty))
     db.add(db_course)
     db.commit()
     db.refresh(db_course)

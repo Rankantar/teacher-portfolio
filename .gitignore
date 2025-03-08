@@ -1,2 +1,11 @@
 .vscode
 **/._*
+totemic-audio-453015-j5-c7d6d598d32c.json
+
+#ignore all the cpython files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+

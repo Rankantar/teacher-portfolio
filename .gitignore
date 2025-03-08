@@ -9,3 +9,7 @@ __pycache__
 *.pyd
 *.pyw
 
+frontend/container-defs.json
+frontend/execution-role-trust-policy.json
+frontend/task-def.json
+frontend/task-definition.json

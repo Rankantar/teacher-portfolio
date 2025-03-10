@@ -7,13 +7,23 @@ class Course(Base):
     
     course_id = Column(Integer, primary_key=True, index=True)
     course_name = Column(String, index=True)
+    description = Column(String, index = False)
+    difficulty = Column(String, index = False)
 
 class Student(Base):
     __tablename__ = "students"
     
     student_id = Column(Integer, primary_key=True, index=True)
     student_name = Column(String, index=True)
-    hours = Column(Integer) 
+    hours = Column(Integer)
+
+
+class Price(Base):
+    __tablename__ = "prices"
+
+    price_id = Column(Integer, primary_key=True, index=True)
+    difficulty = Column(String, index=True)
+    hourly_wage = Column(Integer)
 
 # Define a Pydantic model for the calendar event
 class CalendarEvent(BaseModel):

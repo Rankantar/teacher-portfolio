@@ -32,6 +32,26 @@ services:
       - app-network
     restart: always
 
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+      - PGADMIN_SERVER_JSON_FILE=/pgadmin4/servers.json
+      - PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION=False
+      - PGADMIN_CONFIG_LOGIN_BANNER="Automatically connecting to Teacher Database"
+      - PGADMIN_CONFIG_CONSOLE_LOG_LEVEL=10
+    ports:
+      - "5050:80"
+    volumes:
+      - ./pgadmin-servers.json:/pgadmin4/servers.json
+    depends_on:
+      - db
+    networks:
+      - app-network
+    restart: always
+
   frontend:
     build:
       context: /frontend

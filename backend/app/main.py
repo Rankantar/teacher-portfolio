@@ -3,7 +3,7 @@ from sqlalchemy.exc import SQLAlchemyError
 from contextlib import asynccontextmanager
 
 from .database import engine, SessionLocal
-from .models import Base, Course, Student
+from .models import Base, Course, Student, Price
 from .api.api import api_router
 
 @asynccontextmanager
@@ -16,6 +16,7 @@ async def lifespan(app: FastAPI):
     try:
         course_count = db.query(Course).count()
         student_count = db.query(Student).count()
+        price_count = db.query(Price).count()
         
         # Seed initial course data if no courses exist
         if course_count == 0:
@@ -79,6 +80,10 @@ async def lifespan(app: FastAPI):
                                'ה. אפקט דופלר ופעימות.',
                  'difficulty': 3},
                 {'course_name': 'מכניקה קוונטית 1',
+                 'description': 'א. משוואת שרדינגר ואופרטורים קוונטיים.\n'
+                                'ב. בורי פוטנציאל ומדרגות פוטנציאל.\n'
+                                'ג. אוסילטור הרמוני קוונטי, תנע זוויתי קוונטי ואופרטורי סולם.\n'
+                                'ד. אטום מימן.',
                  'difficulty': 3},
                 {'course_name': 'מתמטיקה לבגרות',
                  'description': 'א. 3 יחידות.\n'
@@ -109,6 +114,17 @@ async def lifespan(app: FastAPI):
             for i, student_data in enumerate(initial_students, 1):
                 student = Student(student_id=i, **student_data)
                 db.add(student)
+
+        # Seed initial price data if no prices exist
+        if price_count == 0:
+            initial_prices = [
+                {"difficulty": "1", "hourly_wage": 130},
+                {"difficulty": "2", "hourly_wage": 150},
+                {"difficulty": "3", "hourly_wage": 180}
+            ]
+            for i, price_data in enumerate(initial_prices, 1):
+                price = Price(price_id=i, **price_data)
+                db.add(price)
         
         db.commit()
     except SQLAlchemyError as e:

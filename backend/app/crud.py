@@ -35,4 +35,23 @@ def create_student(db: Session, student: schemas.StudentCreate):
     db.add(db_student)
     db.commit()
     db.refresh(db_student)
-    return db_student 
+    return db_student
+
+# Price CRUD operations
+def get_prices(db: Session, first_n: int = None):
+    query = db.query(models.Price)
+    if first_n:
+        return query.limit(first_n).all()
+    return query.all()
+
+def get_price(db: Session, price_id: int):
+    return db.query(models.Price).filter(models.Price.price_id_id == price_id).first()
+
+def create_price(db: Session, price: schemas.PriceCreate):
+    last_price = db.query(models.Price).order_by(models.Price.price_id.desc()).first()
+    next_id = 1 if last_price is None else last_price.price_id + 1
+    db_price = models.Price(price_id=next_id, difficulty=price.difficulty, hourly_wage=price.hourly_wage)
+    db.add(db_price)
+    db.commit()
+    db.refresh(db_price)
+    return db_price

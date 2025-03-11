@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from sqlalchemy.exc import SQLAlchemyError
 from contextlib import asynccontextmanager
+from fastapi.middleware.cors import CORSMiddleware
 
 from .database import engine, SessionLocal
 from .models import Base, Course, Student, Price
@@ -138,6 +139,15 @@ async def lifespan(app: FastAPI):
     # Shutdown: Add any cleanup code here if needed
 
 app = FastAPI(title="Teacher Portfolio API", lifespan=lifespan)
+
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, replace with specific origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Include API router
 app.include_router(api_router)

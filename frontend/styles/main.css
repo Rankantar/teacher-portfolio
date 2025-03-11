@@ -1,10 +1,8 @@
 .landing-section {
-	background-image: url(/public/sectionbg1.jpg);
+	background-image: url(../public/sectionbg1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-
-	/* background-color: var(--clr-bg); */
 }
 
 .landing-section h4 {
@@ -44,26 +42,22 @@
 	background-color: var(--clr-main);
 }
 
-.about-img-container {
-	flex: 1;
-	max-width: 600px;
-}
 .video-thumbnail {
-	border-radius: 40px;
+	border-radius: 20px;
 	max-width: 100%;
-	height: auto;
+	width: 600px;
 }
 
 .about-info h1 {
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 	color: var(--clr-bg);
-	font-size: var(--fs-l);
+	font-size: var(--fs-xl);
+	max-width: 20ch;
 }
 
 .about-info p {
 	color: var(--clr-bg);
 	font-size: var(--fs-400);
-	margin-right: 2rem;
 }
 
 .lessons-section {
@@ -80,7 +74,7 @@
 	font-size: var(--fs-500);
 	line-height: 30px;
 	color: var(--clr-text);
-	margin-bottom: 10rem;
+	margin-bottom: 8rem;
 	margin-right: 2rem;
 }
 
@@ -138,7 +132,7 @@
 
 .pricing-section h1 {
 	font-size: var(--fs-xl);
-	margin-bottom: 6rem;
+	margin-bottom: 20rem;
 	color: var(--clr-bg);
 }
 
@@ -150,54 +144,65 @@
 	gap: 2rem;
 }
 
-.pricing-card-a,
-.pricing-card-b {
+.pricing-card {
 	flex: 1;
 	padding: 1em;
 	border-radius: 20px;
 	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.126);
 }
 
-.pricing-card-a h4,
-.pricing-card-b h4 {
+.pricing-card h4 {
 	font-size: var(--fs-500);
 }
 
-.card-a-price-row,
-.card-b-price-row {
+.card-price-row {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	font-size: var(--fs-m);
 }
 
-.card-a-price-row i,
-.card-b-price-row i {
+.card-price-row i {
 	color: var(--clr-accent);
 	border: solid 2px var(--clr-accent);
 	border-radius: 30px;
 	padding: 0.3rem 0.4rem;
 }
 
-.card-a-inc,
-.card-b-inc {
+.card-inc {
 	font-size: var(--fs-400);
 }
 
-.card-a-list,
-.card-b-list {
+.card-list {
 	margin-right: 2rem;
 	font-size: var(--fs-400);
 }
 
-.pricing-card-a {
+.pricing-card {
 	background-color: var(--clr-bg);
 	color: var(--clr-main);
 }
 
-.pricing-card-b {
-	background-color: var(--clr-bg);
-	color: var(--clr-main);
+.pricing-card.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.pricing-card.loading h4 {
+    color: #666;
+    font-size: 1.2rem;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
 }
 
 .faq-section {
@@ -208,6 +213,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.faq-title {
+	color: var(--clr-bg);
+	font-size: var(--fs-xl);
+	margin-bottom: 1em;
 }
 
 .faq-card {
@@ -244,10 +255,127 @@
 	max-width: 120ch;
 }
 
+.book-section {
+	background-color: var(--clr-bg);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
 .book-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 1rem;
+	flex-grow: 1;
+	gap: 2rem;
+	background-color: var(--clr-main);
+	border-radius: 40px;
+}
+
+.book-container h1 {
+	font-size: var(--fs-xxl);
+	color: var(--clr-bg);
+	margin-bottom: 5rem;
+}
+
+.input-container label {
+	font-size: var(--fs-m);
+	color: var(--clr-bg);
+}
+
+.input-container {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.input-container input {
+	min-width: 20px;
+	padding: 0.2em;
+	border-radius: 4px;
+	border: none;
+	font-size: var(--fs-400);
+}
+
+@media (max-width: 1024px) {
+	:root {
+		--fs-xxl: 6rem;
+		--fs-xl: 4rem;
+		--fs-l: 2.5rem;
+		--fs-m: 2rem;
+		--fs-600: 1.5rem;
+		--fs-500: 1.25rem;
+		--fs-400: 1rem;
+	}
+
+	html {
+		scroll-snap-type: y mandatory;
+		scroll-padding-top: 2em;
+	}
+
+	section {
+		min-height: 1000px;
+		padding: 5rem 1rem;
+		scroll-snap-align: start;
+		scroll-snap-stop: normal;
+	}
+
+	#intro,
+	#lessons,
+	#pricing,
+	#faq,
+	#book {
+		scroll-margin-top: 0;
+	}
+
+	.pricing-card-container {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: space-evenly;
+		gap: 2rem;
+	}
+
+	.landing-section {
+		background-position: 40% 50%;
+	}
+
+	.about-section {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.pricing-section h1 {
+		margin-bottom: 4rem;
+	}
+}
+
+@media (max-width: 640px) {
+	:root {
+		--fs-xxl: 4.75rem;
+		--fs-xl: 3rem;
+		--fs-l: 2.5rem;
+		--fs-m: 1.5rem;
+		--fs-600: 1.5rem;
+		--fs-500: 1.25rem;
+		--fs-400: 1rem;
+	}
+
+	.middle-section {
+		display: none;
+	}
+
+	.lessons-card {
+		min-width: 25ch;
+	}
+
+	.book-container h1 {
+		margin-bottom: 2rem;
+		font-size: var(--fs-xxl);
+	}
+
+	.input-container {
+		flex-direction: column;
+	}
 }

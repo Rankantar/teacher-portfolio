@@ -47,7 +47,7 @@ a {
 
 body {
 	background-color: white;
-	margin-top: 85px;
+	margin-top: 3em;
 }
 
 body::-webkit-scrollbar {
@@ -63,5 +63,17 @@ body::-webkit-scrollbar {
 }
 
 section {
-	padding: 14rem 5rem 28rem;
+	min-height: 1200px;
+	padding: 5rem 3rem;
+}
+
+#intro,
+#lessons,
+#pricing,
+#faq {
+	scroll-margin-top: 50px;
+}
+
+#book {
+	scroll-margin-top: 25px;
 }

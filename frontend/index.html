@@ -44,7 +44,7 @@
 
 			<!-- left section -->
 			<div>
-				<a href="https://www.youtube.com/watch?v=llyiQ4I-mcQ">
+				<a href="#book">
 					<button class="book-lesson">הזמן שיעור</button>
 				</a>
 			</div>
@@ -52,7 +52,7 @@
 
 		<main>
 			<!-- Welcome banner -->
-			<section id="landing" class="landing-section">
+			<section id="intro" class="landing-section">
 				<h4>לימדו פיזיקה</h4>
 				<h1>בדרך של ניר</h1>
 				<p>
@@ -60,7 +60,7 @@
 					לזרוק כדור על הרצפה ולצפות בו נופל הרעיון בניר זה שהוא בן
 					אדם ממש חכם ומקסים ולפעמים נותן מכות קטנות בטוסטוס.
 				</p>
-				<a href="https://www.youtube.com/watch?v=llyiQ4I-mcQ">
+				<a href="#book">
 					<button class="sign-in-button">הרשמה</button>
 				</a>
 			</section>
@@ -220,17 +220,17 @@
 			<section id="pricing" class="pricing-section">
 				<h1>מחירון</h1>
 				<div class="pricing-card-container">
-					<div class="pricing-card-a">
+					<div class="pricing-card">
 						<h4>שיעור 1</h4>
-						<div class="card-a-price-row">
+						<div class="card-price-row">
 							<h2>$4.20</h2>
 							<a href="">
 								<i class="fa-solid fa-arrow-left"></i>
 							</a>
 						</div>
 						<div>
-							<h5 class="card-a-inc">כלול בחבילה:</h5>
-							<ul class="card-a-list">
+							<h5 class="card-inc">כלול בחבילה:</h5>
+							<ul class="card-list">
 								<li>היי</li>
 								<li>ביי</li>
 								<li>די</li>
@@ -242,9 +242,9 @@
 							</ul>
 						</div>
 					</div>
-					<div class="pricing-card-b">
+					<div class="pricing-card">
 						<h4>שיעור 2</h4>
-						<div class="card-b-price-row">
+						<div class="card-price-row">
 							<h2>$6.20</h2>
 							<a href="">
 								<i class="fa-solid fa-arrow-left"></i>
@@ -252,8 +252,8 @@
 						</div>
 
 						<div>
-							<h5 class="card-b-inc">כלול בחבילה:</h5>
-							<ul class="card-b-list">
+							<h5 class="card-inc">כלול בחבילה:</h5>
+							<ul class="card-list">
 								<li>היי</li>
 								<li>ביי</li>
 								<li>די</li>
@@ -266,17 +266,17 @@
 						</div>
 					</div>
 
-					<div class="pricing-card-a">
+					<div class="pricing-card">
 						<h4>שיעור 1</h4>
-						<div class="card-a-price-row">
+						<div class="card-price-row">
 							<h2>$4.20</h2>
 							<a href="">
 								<i class="fa-solid fa-arrow-left"></i>
 							</a>
 						</div>
 						<div>
-							<h5 class="card-a-inc">כלול בחבילה:</h5>
-							<ul class="card-a-list">
+							<h5 class="card-inc">כלול בחבילה:</h5>
+							<ul class="card-list">
 								<li>היי</li>
 								<li>ביי</li>
 								<li>די</li>
@@ -293,6 +293,7 @@
 			<!-- FAQ section -->
 			<section id="faq" class="faq-section">
 				<div class="faq-container">
+					<h1 class="faq-title">שאלות ותשובות</h1>
 					<div class="faq-card">
 						<div class="card-row">
 							<h1>איך ללמוד עם ניר שונה ממורים אחרים?</h1>
@@ -334,13 +335,35 @@
 				</div>
 			</section>
 			<!-- Book A lesson section -->
-			<section>
+			<section class="book-section" id="book">
 				<div class="book-container">
-					<h1>קבע שיעור</h1>
-					<input type="text" name="" id="" placeholder="שם" />
-					<input type="number" name="" id="" placeholder="טלפון" />
-					<input type="date" name="" id="" />
-					<input type="time" name="" id="" />
+					<h1>הרשמה</h1>
+					<div class="input-container">
+						<label for="inputname">שם מלא </label>
+						<input
+							type="text"
+							name="username"
+							id="inputname"
+							placeholder="ניר וטורי"
+						/>
+					</div>
+					<div class="input-container">
+						<label for="inputnumber">מספר טלפון</label>
+						<input
+							type="number"
+							name="phonenumber"
+							id="inputnumber"
+							placeholder="הכנס מספר"
+						/>
+					</div>
+					<div class="input-container">
+						<label for="inputdatetime"> תאריך מבוקש</label>
+						<input
+							type="datetime-local"
+							name="dateschedule"
+							id="inputdatetime"
+						/>
+					</div>
 				</div>
 			</section>
 		</main>

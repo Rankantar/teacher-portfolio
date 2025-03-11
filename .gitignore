@@ -1,0 +1,15 @@
+.vscode
+**/._*
+totemic-audio-453015-j5-c7d6d598d32c.json
+
+#ignore all the cpython files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+
+frontend/container-defs.json
+frontend/execution-role-trust-policy.json
+frontend/task-def.json
+frontend/task-definition.json

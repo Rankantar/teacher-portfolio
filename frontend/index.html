@@ -220,73 +220,9 @@
 			<section id="pricing" class="pricing-section">
 				<h1>מחירון</h1>
 				<div class="pricing-card-container">
-					<div class="pricing-card">
-						<h4>שיעור 1</h4>
-						<div class="card-price-row">
-							<h2>$4.20</h2>
-							<a href="">
-								<i class="fa-solid fa-arrow-left"></i>
-							</a>
-						</div>
-						<div>
-							<h5 class="card-inc">כלול בחבילה:</h5>
-							<ul class="card-list">
-								<li>היי</li>
-								<li>ביי</li>
-								<li>די</li>
-								<li>מאי</li>
-								<li>דידי</li>
-								<li>ביבי</li>
-								<li>ריבי</li>
-								<li>ציפי</li>
-							</ul>
-						</div>
-					</div>
-					<div class="pricing-card">
-						<h4>שיעור 2</h4>
-						<div class="card-price-row">
-							<h2>$6.20</h2>
-							<a href="">
-								<i class="fa-solid fa-arrow-left"></i>
-							</a>
-						</div>
-
-						<div>
-							<h5 class="card-inc">כלול בחבילה:</h5>
-							<ul class="card-list">
-								<li>היי</li>
-								<li>ביי</li>
-								<li>די</li>
-								<li>מאי</li>
-								<li>דידי</li>
-								<li>ביבי</li>
-								<li>ריבי</li>
-								<li>ציפי</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="pricing-card">
-						<h4>שיעור 1</h4>
-						<div class="card-price-row">
-							<h2>$4.20</h2>
-							<a href="">
-								<i class="fa-solid fa-arrow-left"></i>
-							</a>
-						</div>
-						<div>
-							<h5 class="card-inc">כלול בחבילה:</h5>
-							<ul class="card-list">
-								<li>היי</li>
-								<li>ביי</li>
-								<li>די</li>
-								<li>מאי</li>
-								<li>דידי</li>
-								<li>ביבי</li>
-								<li>ריבי</li>
-								<li>ציפי</li>
-							</ul>
-						</div>
+					<!-- Pricing cards will be dynamically populated from the backend -->
+					<div class="pricing-card loading">
+						<h4>טוען מחירים...</h4>
 					</div>
 				</div>
 			</section>
@@ -368,5 +304,15 @@
 			</section>
 		</main>
 		<footer></footer>
+		
+		<!-- API and script files -->
+		<script src="public/js/api.js"></script>
+		<script>
+			// Initialize the application when the DOM is fully loaded
+			document.addEventListener('DOMContentLoaded', function() {
+				// Update pricing cards with data from the backend
+				window.teacherPortfolioAPI.updatePricingCards();
+			});
+		</script>
 	</body>
 </html>

@@ -25,7 +25,7 @@
 	margin-top: 3rem;
 	border: none;
 	margin-right: 2rem;
-	padding: 0.75em 1em;
+	padding: 0.4em 0.8em;
 	font-size: var(--fs-m);
 	color: var(--clr-bg);
 	background-color: var(--clr-accent);
@@ -308,6 +308,16 @@
 	border-radius: 4px;
 	border: none;
 	font-size: var(--fs-400);
+}
+
+.submit-button {
+	font-size: var(--fs-m);
+	padding: 0.2em 0.7em;
+	margin-top: 3rem;
+	background-color: var(--clr-accent);
+	color: var(--clr-bg);
+	border: solid 1px var(--clr-bg);
+	border-radius: 2px;
 }
 
 @media (max-width: 1024px) {

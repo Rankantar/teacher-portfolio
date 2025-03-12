@@ -282,8 +282,7 @@
 							id="inputname"
 							placeholder="ניר וטורי"
 						/>
-					</div>
-					<div class="input-container">
+
 						<label for="inputnumber">מספר טלפון</label>
 						<input
 							type="number"
@@ -291,8 +290,7 @@
 							id="inputnumber"
 							placeholder="הכנס מספר"
 						/>
-					</div>
-					<div class="input-container">
+
 						<label for="inputdatetime"> תאריך מבוקש</label>
 						<input
 							type="datetime-local"
@@ -304,12 +302,12 @@
 			</section>
 		</main>
 		<footer></footer>
-		
+
 		<!-- API and script files -->
 		<script src="public/js/api.js"></script>
 		<script>
 			// Initialize the application when the DOM is fully loaded
-			document.addEventListener('DOMContentLoaded', function() {
+			document.addEventListener("DOMContentLoaded", function () {
 				// Update pricing cards with data from the backend
 				window.teacherPortfolioAPI.updatePricingCards();
 			});

@@ -222,30 +222,37 @@
 }
 
 .faq-card {
-	margin-bottom: 3em;
-	padding: 2em 3em;
+	margin-bottom: 1.5em;
+	padding: 1.5em 3em;
 	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.347);
 	border-radius: 15px;
-
 	background-color: var(--clr-bg);
 	color: var(--clr-text);
+	overflow: hidden;
+	transition: all 0.3s ease-in-out;
 }
 
 .card-row {
 	display: flex;
-	align-items: top;
+	align-items: center;
 	justify-content: space-between;
+	cursor: pointer;
 }
 
 .card-row h1 {
 	color: var(--clr-main);
 	font-size: var(--fs-m);
-	margin-bottom: 1rem;
+	margin-bottom: 0;
 }
 
 .fa-atom {
 	font-size: var(--fs-m);
 	color: var(--clr-accent);
+	transition: transform 0.3s ease;
+}
+
+.faq-card.active .fa-atom {
+	transform: rotate(90deg);
 }
 
 .faq-card p {
@@ -253,6 +260,17 @@
 	margin-right: 0.8rem;
 	flex: 1;
 	max-width: 120ch;
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: all 0.3s ease-in-out;
+	margin-top: 0;
+}
+
+.faq-card.active p {
+	max-height: 1000px;
+	opacity: 1;
+	margin-top: 1rem;
 }
 
 .book-section {

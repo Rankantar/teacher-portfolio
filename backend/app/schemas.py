@@ -42,3 +42,8 @@ class PriceModel(PriceBase):
 
     class Config:
         orm_mode = True
+
+class SlotTime(BaseModel):
+    start_time: str
+    end_time: str
+    is_available: bool
